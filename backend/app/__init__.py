@@ -18,12 +18,15 @@ def create_app(config_class=Config):
 
     # Import models to ensure they are registered with SQLAlchemy
     from app.models.user import User, RefreshToken
+    from app.models.resume import Resume
 
     # Register blueprints
     from app.routes import main_bp
     from app.routes.auth import auth_bp
+    from app.routes.resumes import resumes_bp
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
+    app.register_blueprint(resumes_bp)
 
     return app
 

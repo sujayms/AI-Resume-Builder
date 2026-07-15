@@ -4,6 +4,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import ResumeCreate from './pages/ResumeCreate';
+import ResumeEditor from './pages/ResumeEditor';
 
 function App() {
   return (
@@ -17,6 +19,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/resumes/new"
+            element={
+              <ProtectedRoute>
+                <ResumeCreate />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/resumes/:id"
+            element={
+              <ProtectedRoute>
+                <ResumeEditor />
               </ProtectedRoute>
             }
           />
