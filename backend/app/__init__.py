@@ -24,9 +24,11 @@ def create_app(config_class=Config):
     from app.routes import main_bp
     from app.routes.auth import auth_bp
     from app.routes.resumes import resumes_bp
+    from app.routes.ai import ai_bp
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(resumes_bp)
+    app.register_blueprint(ai_bp)
 
     return app
 

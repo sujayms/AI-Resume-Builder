@@ -37,7 +37,9 @@ def create_resume():
         "email": "",
         "phone": "",
         "summary": "",
-        "skills": ""
+        "skills": "",
+        "experience": "",
+        "projects": ""
     }
     # Merge provided content with defaults
     merged_content = {**default_content, **content}
@@ -192,7 +194,9 @@ def update_resume(resume_id):
                 "email": "",
                 "phone": "",
                 "summary": "",
-                "skills": ""
+                "skills": "",
+                "experience": "",
+                "projects": ""
             }
             resume.content = {**default_content, **(content or {})}
             

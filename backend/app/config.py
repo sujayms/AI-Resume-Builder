@@ -22,3 +22,6 @@ class Config:
     JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY', 'default-jwt-secret-key-change-in-prod')
     JWT_ACCESS_TOKEN_EXPIRES = int(os.environ.get('JWT_ACCESS_TOKEN_EXPIRES', 24)) # in hours
 
+    # Gemini AI configuration
+    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+
